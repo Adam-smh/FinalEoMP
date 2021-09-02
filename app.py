@@ -326,8 +326,8 @@ def registration():
                 response['status_code'] = 400
                 return response
 
-        db = Database()
-        db.registration(first_name, last_name, email, username, password)
+            db = Database()
+            db.registration(first_name, last_name, email, username, password)
 
         users = fetch_users()
         username_table = {u.username: u for u in users}
