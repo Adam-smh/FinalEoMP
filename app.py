@@ -334,14 +334,14 @@ def registration():
         userid_table = {u.id: u for u in users}
 
         # Send email
-        msg = Message('Erispe8 Registration Successful', sender='adamafrica.dev@gmail.com', recipients=[email])
-        msg.body = "Hi there {}, \n \n" \
-                   "We are happy to have you on board. \n " \
-                   "Purchases will be received with an emailed receipt, " \
-                   "free shipping for orders over R450. \n \n" \
-                   "Happy shopping! \n" \
-                   "Erispe8".format(username)
-        mail.send(msg)
+        # msg = Message('Erispe8 Registration Successful', sender='adamafrica.dev@gmail.com', recipients=[email])
+        # msg.body = "Hi there {}, \n \n" \
+        #            "We are happy to have you on board. \n " \
+        #            "Purchases will be received with an emailed receipt, " \
+        #            "free shipping for orders over R450. \n \n" \
+        #            "Happy shopping! \n" \
+        #            "Erispe8".format(username)
+        # mail.send(msg)
 
         response["message"] = "success"
         response["status_code"] = 201
