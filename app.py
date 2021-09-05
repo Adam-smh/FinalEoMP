@@ -453,7 +453,6 @@ def add_product(user_id):
 
 
 @app.route('/show-products/')
-@jwt_required()
 def fetch_products():
     response = {}
 
