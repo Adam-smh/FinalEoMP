@@ -421,11 +421,11 @@ def add_product(user_id):
         # error trapping
         try:
             # form data used to make adding images easier
-            product_name = request.form['product_name']
+            product_name = request.json['product_name']
             product_image = request.files['product_image']
-            product_category = request.form['product_category']
-            product_description = request.form['product_description']
-            product_price = request.form['product_price']
+            product_category = request.json['product_category']
+            product_description = request.json['product_description']
+            product_price = request.json['product_price']
 
             # checking if any field is left empty
             if not product_name or not product_category or not product_description or not product_price:
@@ -466,7 +466,7 @@ def fetch_products():
 
 
 @app.route('/view-product/<int:product_id>/')
-def view_product(product_id):
+def view_product(product_id): yt
     response = {}
 
     db = Database()
