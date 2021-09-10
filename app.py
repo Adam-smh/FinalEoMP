@@ -422,7 +422,7 @@ def add_product(user_id):
         try:
             # form data used to make adding images easier
             product_name = request.json['product_name']
-            product_image = request.files['product_image']
+            product_image = request.json['product_image']
             product_category = request.json['product_category']
             product_description = request.json['product_description']
             product_price = request.json['product_price']
